@@ -11,7 +11,7 @@ class _HomeDuaState extends State<HomeDua> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
       ),
-      body: Text("deneme 3"),
+      body: Text("Razor Blade Engine"),
     );
   }
 }
