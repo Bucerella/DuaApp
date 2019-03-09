@@ -15,23 +15,11 @@ class _HomeDuaState extends State<HomeDua> {
 
     return Scaffold(
         backgroundColor: Colors.white,
-        body: NestedScrollView(
-          headerSliverBuilder: (context, inner) {
-            return <Widget>[
-              SliverAppBar(
-                expandedHeight: MediaQuery.of(context).size.width,
-                floating: true,
-                pinned: true,
-                flexibleSpace: FlexibleSpaceBar(
-                  background: Image.asset("images/mumin.jpg"),
-                ),
-                backgroundColor: Colors.white,
-              ),
-            ];
-          },
+
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
+                Image.asset("images/mumin.jpg"),
                 Text(
                   "Günün Hadisi",
                   textAlign: TextAlign.center,
@@ -65,7 +53,7 @@ class _HomeDuaState extends State<HomeDua> {
                   height: 5,
                 ),
                 makeCard(
-                    "Abdestler", "Abdest nasıl alınır?", "/abdest/abdest.png",
+                    "Abdestler", "Abdest nasıl alınır?", "abdest-al.png",
                     yol: AbdestPage(), context: context),
                 SizedBox(
                   height: 5,
@@ -84,6 +72,6 @@ class _HomeDuaState extends State<HomeDua> {
               ],
             ),
           ),
-        ));
+    );
   }
 }
