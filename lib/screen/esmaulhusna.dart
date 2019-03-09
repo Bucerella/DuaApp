@@ -1,3 +1,4 @@
+import 'package:dua_app/widgets/esmaul_builder.dart';
 import 'package:dua_app/widgets/extension_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -20,42 +21,7 @@ class _EsmaulHusnaState extends State<EsmaulHusna> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            esmaulHusnaCard(
-                "Deneme",
-                "Arapça",
-                "Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa ",
-                size),
-            esmaulHusnaCard(
-                "Deneme",
-                "Arapça",
-                "Eşi benzeri olmayan, bütün noksan sıfatlardan münezzeh tek ilah, Her biri sonsuz bir hazine olan bütün isimlerini kuşatan özel ismi. İsimlerin sultanı.",
-                size),
-            esmaulHusnaCard(
-                "Deneme",
-                "ﷲ",
-                "Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa ",
-                size),
-            esmaulHusnaCard(
-                "Deneme",
-                "اَلـْـبَارِئُ",
-                "Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa ",
-                size),
-            esmaulHusnaCard(
-                "Deneme",
-                "اَلـْـبَارِئُ",
-                "Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa ",
-                size),
-            esmaulHusnaCard(
-                "Deneme",
-                "اَلـْـبَارِئُ",
-                "Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa Anlamıa ",
-                size),
-          ],
-        ),
-      ),
+      body: jsonParse(),
     );
   }
 }
