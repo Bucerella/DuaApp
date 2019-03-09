@@ -64,15 +64,22 @@ flutter:
       fonts:
         - asset: fonts/Srisakdi-Bold.ttf
         - asset: fonts/Srisakdi-Regular.ttf
+
     - family: FiraSans
       fonts:
         - asset: fonts/FiraSans-Regular.ttf
+
     - family: Montserrat
       fonts:
         - asset: fonts/Montserrat-SemiBold.otf
         - asset: fonts/Montserrat-Regular.otf
 
-  #   - family: Schyler
+    - family: TitilliumWeb
+      fonts:
+        - asset: fonts/TitilliumWeb-Bold.ttf
+        - asset: fonts/TitilliumWeb-Regular.ttf
+
+  #  - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
