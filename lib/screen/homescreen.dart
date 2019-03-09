@@ -11,7 +11,7 @@ class _HomeDuaState extends State<HomeDua> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
       ),
-      body: Text("İLK DENEME -2"),
+      body: Text("deneme 3"),
     );
   }
 }
