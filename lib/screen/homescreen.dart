@@ -8,7 +8,10 @@ class _HomeDuaState extends State<HomeDua> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+      ),
+      body: Text("İLK DENEME"),
     );
   }
 }
