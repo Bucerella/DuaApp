@@ -1,3 +1,5 @@
+import 'package:dua_app/screen/abdestler/abdest.dart';
+import 'package:dua_app/screen/esmaulhusna.dart';
 import 'package:dua_app/widgets/extension_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -49,18 +51,36 @@ class _HomeDuaState extends State<HomeDua> {
                       fontSize: 20,
                       color: Color(0xFF4BC1CF)),
                 ),
-                SizedBox(height: 5,),
-                makeCard("Namaz Duaları","Namaz dualarını okuyun.","dualar.png"),
-                SizedBox(height: 5,),
-                makeCard("Namaz Sureleri", "Namaz surelerini okuyun.", "eller.png"),
-                SizedBox(height: 5,),
-                makeCard("Abdestler", "Abdest nasıl alınır?", "abdest.png"),
-                SizedBox(height: 5,),
+                SizedBox(
+                  height: 5,
+                ),
+                makeCard(
+                    "Namaz Duaları", "Namaz dualarını okuyun.", "dualar.png"),
+                SizedBox(
+                  height: 5,
+                ),
+                makeCard(
+                    "Namaz Sureleri", "Namaz surelerini okuyun.", "eller.png"),
+                SizedBox(
+                  height: 5,
+                ),
+                makeCard(
+                    "Abdestler", "Abdest nasıl alınır?", "/abdest/abdest.png",
+                    yol: AbdestPage(), context: context),
+                SizedBox(
+                  height: 5,
+                ),
                 makeCard("Namaz", "Namaz nasıl kılınır?", "namaznasil.png"),
-                SizedBox(height: 5,),
+                SizedBox(
+                  height: 5,
+                ),
                 makeCard("Zikir", "Zikirmatik", "zikircek.png"),
-                SizedBox(height: 5,),
-                makeCard("Esmaü'l Hüsna", "Esmaü'l Hüsna okuyun.", "esmaulhusna.png"),
+                SizedBox(
+                  height: 5,
+                ),
+                makeCard(
+                    "Esmaü'l Hüsna", "Esmaü'l Hüsna okuyun.", "esmaulhusna.png",
+                    yol: EsmaulHusna(), context: context),
               ],
             ),
           ),
