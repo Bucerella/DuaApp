@@ -1,3 +1,4 @@
+import 'package:dua_app/screen/namaz_sureleri/namazsureleri_detay.dart';
 import 'package:flutter/material.dart';
 
 Widget makeCard(String baslik, String altBaslik, String icon,
@@ -164,14 +165,14 @@ Widget abdestCard(String isim, context, {Widget yol}) {
   );
 }
 
-Widget namazAbdesti(BuildContext context,String resim,String aciklama) {
+Widget namazAbdesti(BuildContext context, String resim, String aciklama) {
   var size = MediaQuery.of(context).size;
 
   return Padding(
     padding: EdgeInsets.only(left: 10, right: 10, top: 6),
     child: Card(
       child: Container(
-        width: size.width-20,
+        width: size.width - 20,
         child: Column(
           children: <Widget>[
             SizedBox(
@@ -179,11 +180,10 @@ Widget namazAbdesti(BuildContext context,String resim,String aciklama) {
             ),
             Image.asset("images/abdest/$resim"),
             SizedBox(
-
               height: 10,
             ),
             Container(
-              alignment: Alignment.topLeft,
+                alignment: Alignment.topLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
@@ -191,9 +191,113 @@ Widget namazAbdesti(BuildContext context,String resim,String aciklama) {
                     style: TextStyle(fontSize: 20, fontFamily: "TitilliumWeb"),
                   ),
                 )),
-
           ],
         ),
+      ),
+    ),
+  );
+}
+
+Widget namazSureCard(String sIsim, String sArabic, String sTurkish, sAnlam,
+    BuildContext context) {
+  var size = MediaQuery.of(context).size;
+  return InkWell(
+    onTap: () {
+      var route = MaterialPageRoute(builder: (context) {
+        return NamazSureDetay(sIsim, sTurkish, sArabic, sAnlam);
+      });
+      Navigator.push(context, route);
+    },
+    child: Card(
+      elevation: 5,
+      color: Colors.white,
+      child: Container(
+        width: size.width,
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Image.asset(
+              "images/namaz-sureleri-icon.png",
+              fit: BoxFit.cover,
+              width: 75,
+              height: 75,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: Text(
+                "$sIsim",
+                style: TextStyle(
+                    color: Color(0xFFCE5069),
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "FiraSans"),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+Widget sureDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
+    BuildContext context) {
+
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "${sArabic.replaceFirst("\n", "")}",
+            style: TextStyle(
+              fontFamily: "TitilliumWeb",
+              fontSize: 30,
+            ),
+          ),
+          SizedBox(height: 15,),
+          Container(
+            height: 4,
+            color: Colors.black,
+
+          ),
+          SizedBox(height: 15,),
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sTurkish.replaceAll(".", ".\n")}",
+              style: TextStyle(
+                fontFamily: "FiraSans",
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            height: 4,
+            color: Colors.black,
+          ),
+          SizedBox(height: 15,),
+          Text(
+            "${sAnlam.replaceAll(".",".\n")}",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              fontFamily: "FiraSans"
+            ),
+          ),
+          SizedBox(height: 20,),
+        ],
       ),
     ),
   );
