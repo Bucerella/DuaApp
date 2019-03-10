@@ -198,6 +198,41 @@ Widget namazAbdesti(BuildContext context, String resim, String aciklama) {
   );
 }
 
+
+
+Widget namazKilinisiCard(BuildContext context, String resim, String aciklama) {
+  var size = MediaQuery.of(context).size;
+
+  return Padding(
+    padding: EdgeInsets.only(left: 10, right: 10, top: 6),
+    child: Card(
+      child: Container(
+        width: size.width - 20,
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 10,
+            ),
+            Image.asset("images/$resim"),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    "$aciklama",
+                    style: TextStyle(fontSize: 20, fontFamily: "TitilliumWeb"),
+                  ),
+                )),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
 Widget namazSureCard(String sIsim, String sArabic, String sTurkish, sAnlam,
     BuildContext context) {
   var size = MediaQuery.of(context).size;
@@ -302,3 +337,33 @@ Widget sureDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
     ),
   );
 }
+
+Widget namazKilinis(String isim, context, {Widget yol}) {
+  var size = MediaQuery.of(context).size;
+  return Expanded(
+    child: InkWell(
+      onTap: () {
+        var route = MaterialPageRoute(builder: (context) {
+          return yol;
+        });
+        Navigator.push(context, route);
+      },
+      child: Card(
+        elevation: 5,
+        child: Container(
+          alignment: Alignment.center,
+          color: Color(0xFFF4EFE1),
+          child: Text(
+            "$isim",
+            style: TextStyle(
+                fontSize: 30,
+                color: Color(0XFF51524E),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Montserrat"),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+

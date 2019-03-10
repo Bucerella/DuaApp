@@ -9,7 +9,9 @@ class _NamazDuaDetayState extends State<NamazDuaDetay> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
+
         title: Text("Namaz Duaları"),
       ),
     );

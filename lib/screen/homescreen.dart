@@ -1,6 +1,7 @@
 import 'package:dua_app/screen/abdestler/abdest.dart';
 import 'package:dua_app/screen/esmaulhusna.dart';
 import 'package:dua_app/screen/namaz_dualari/namazdualari.dart';
+import 'package:dua_app/screen/namaz_kilinisi/namazkilinisi.dart';
 import 'package:dua_app/screen/namaz_sureleri/namazsureleri.dart';
 import 'package:dua_app/widgets/extension_widget.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,7 @@ class _HomeDuaState extends State<HomeDua> {
             SizedBox(
               height: 5,
             ),
-            makeCard("Namaz", "Namaz nasıl kılınır?", "namaznasil.png"),
+            makeCard("Namaz", "Namaz nasıl kılınır?", "namaznasil.png",yol: NamazKilinislari(),context: context),
             SizedBox(
               height: 5,
             ),
@@ -68,6 +69,7 @@ class _HomeDuaState extends State<HomeDua> {
             makeCard(
                 "Esmaü'l Hüsna", "Esmaü'l Hüsna okuyun.", "esmaulhusna.png",
                 yol: EsmaulHusna(), context: context),
+            SizedBox(height: 10,)
           ],
         ),
       ),
