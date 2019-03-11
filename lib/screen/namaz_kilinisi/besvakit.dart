@@ -1,4 +1,8 @@
+import 'package:dua_app/screen/namaz_kilinisi/aksamnamazi.dart';
+import 'package:dua_app/screen/namaz_kilinisi/ikindinamazi.dart';
+import 'package:dua_app/screen/namaz_kilinisi/oglennamazi.dart';
 import 'package:dua_app/screen/namaz_kilinisi/sabahnamazi.dart';
+import 'package:dua_app/screen/namaz_kilinisi/yatsinamazi.dart';
 import 'package:flutter/material.dart';
 class BestVakitNamazlar extends StatefulWidget {
   @override
@@ -31,10 +35,10 @@ class _BestVakitNamazlarState extends State<BestVakitNamazlar> with SingleTicker
       ),
       body: TabBarView(controller: _tabController,children:[
         SabahNamazi(),
-        SabahNamazi(),
-        SabahNamazi(),
-        SabahNamazi(),
-        SabahNamazi(),
+        OgleNamazi(),
+        IkindiNamazi(),
+        AksamNamazi(),
+        YatsiNamazi(),
 
       ] ),
     );
