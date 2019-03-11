@@ -307,7 +307,7 @@ Widget sureDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
           Container(
             alignment: Alignment.topLeft,
             child: Text(
-              "${sTurkish.replaceAll(".", ".\n")}",
+              "${sTurkish.replaceAll(". ", ".\n")}",
               style: TextStyle(
                 fontFamily: "FiraSans",
                 fontSize: 18,
@@ -323,12 +323,15 @@ Widget sureDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
             color: Colors.black,
           ),
           SizedBox(height: 15,),
-          Text(
-            "${sAnlam.replaceAll(".",".\n")}",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              fontFamily: "FiraSans"
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sAnlam.replaceAll(". ",".\n")}",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                fontFamily: "FiraSans"
+              ),
             ),
           ),
           SizedBox(height: 20,),

@@ -3,6 +3,7 @@ import 'package:dua_app/screen/esmaulhusna.dart';
 import 'package:dua_app/screen/namaz_dualari/namazdualari.dart';
 import 'package:dua_app/screen/namaz_kilinisi/namazkilinisi.dart';
 import 'package:dua_app/screen/namaz_sureleri/namazsureleri.dart';
+import 'package:dua_app/screen/zikirmatik.dart';
 import 'package:dua_app/widgets/extension_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +63,7 @@ class _HomeDuaState extends State<HomeDua> {
             SizedBox(
               height: 5,
             ),
-            makeCard("Zikir", "Zikirmatik", "zikircek.png"),
+            makeCard("Zikir", "Zikirmatik", "zikircek.png",yol: ZikirMatik(),context: context),
             SizedBox(
               height: 5,
             ),
