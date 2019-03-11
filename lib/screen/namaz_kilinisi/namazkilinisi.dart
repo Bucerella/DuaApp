@@ -1,5 +1,7 @@
 import 'package:dua_app/screen/abdestler/namazabdesti.dart';
+import 'package:dua_app/screen/namaz_kilinisi/bayramnamazi.dart';
 import 'package:dua_app/screen/namaz_kilinisi/besvakit.dart';
+import 'package:dua_app/screen/namaz_kilinisi/cenazenamazi.dart';
 import 'package:dua_app/widgets/extension_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -28,8 +30,8 @@ class _NamazKilinislariState extends State<NamazKilinislari> {
         children: <Widget>[
           Image.asset("images/namaz.jpg"),
           namazKilinis("Namazlar",context,yol: BestVakitNamazlar()),
-          namazKilinis("Cenaze Namazı",context, yol: BestVakitNamazlar()),
-          namazKilinis("Bayram Namazı",context,yol: BestVakitNamazlar()),
+          namazKilinis("Cenaze Namazı",context, yol: CenazeNamazi()),
+          namazKilinis("Bayram Namazı",context,yol: BayramNamazi()),
         ],
       ),
     );
