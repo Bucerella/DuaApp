@@ -34,7 +34,7 @@ dev_dependencies:
   flutter_launcher_icons: "^0.6.1"
 
 flutter_icons:
-  image_path: "images/logo.jpg"
+  image_path: "images/new_logo.png"
   android: true
   ios: true
 

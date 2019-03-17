@@ -16,14 +16,18 @@ Widget makeCard(String baslik, String altBaslik, String icon,
       child: Card(
         elevation: 5,
         color: Color(0xFF4BC1CF),
-        child: ListTile(
-          leading: Image.asset(
-            "images/$icon",
-            height: 50,
-            width: 78,
+        child: Container(
+          alignment: Alignment.centerLeft,
+          height: 75,
+          child: ListTile(
+            leading: Image.asset(
+              "images/$icon",
+              height: 50,
+              width: 78,
+            ),
+            title: Text("$baslik "),
+            subtitle: Text("$altBaslik"),
           ),
-          title: Text("$baslik "),
-          subtitle: Text("$altBaslik"),
         ),
       ),
     ),

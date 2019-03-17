@@ -24,15 +24,8 @@ class _HomeDuaState extends State<HomeDua> {
         child: Column(
           children: <Widget>[
             Image.asset("images/mumin.jpg"),
-            Text(
-              "Günün Hadisi",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.black,
-              ),
+            SizedBox(
+              height: 10,
             ),
             Text(
               "\"Kalp kırmak kabeyi yıkmak gibidir.\"",
@@ -44,7 +37,7 @@ class _HomeDuaState extends State<HomeDua> {
                   color: Color(0xFF4BC1CF)),
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             makeCard("Dualar", "Namaz dualarını, surelerini, faydalı duaları okuyun.", "dualar.png",yol: DualarGenel(),context: context),
             SizedBox(

@@ -10,6 +10,7 @@ class _FaydaliDualarState extends State<FaydaliDualar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text("FAYDALI DUALAR",
           style: TextStyle(
             fontFamily: "FiraSans",

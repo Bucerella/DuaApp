@@ -15,8 +15,10 @@ class _DualarGenelState extends State<DualarGenel> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.black,
-      appBar: AppBar(title: Text("FAYDALI DUALAR"),
+      appBar: AppBar(title: Text("DUALAR"),
+          centerTitle: true,
         backgroundColor: Color(0XFF000000),
         elevation: 0,
       ),
