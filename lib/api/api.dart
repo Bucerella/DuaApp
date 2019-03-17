@@ -19,3 +19,9 @@ Future<List> getDualar() async{
    http.Response response = await http.get(url);
    return json.decode(utf8.decode(response.bodyBytes));
 }
+
+Future<List> getFaydaliDualar() async{
+   String url = "http://mikailhoca.com/dua_api/faydali.json";
+   http.Response response = await http.get(url);
+   return json.decode(utf8.decode(response.bodyBytes));
+}

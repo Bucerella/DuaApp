@@ -1,4 +1,5 @@
 import 'package:dua_app/screen/abdestler/abdest.dart';
+import 'package:dua_app/screen/dualar.dart';
 import 'package:dua_app/screen/esmaulhusna.dart';
 import 'package:dua_app/screen/namaz_dualari/namazdualari.dart';
 import 'package:dua_app/screen/namaz_kilinisi/namazkilinisi.dart';
@@ -45,12 +46,7 @@ class _HomeDuaState extends State<HomeDua> {
             SizedBox(
               height: 5,
             ),
-            makeCard("Namaz Duaları", "Namaz dualarını okuyun.", "dualar.png",yol: NamazDualari(),context: context),
-            SizedBox(
-              height: 5,
-            ),
-            makeCard("Namaz Sureleri", "Namaz surelerini okuyun.", "eller.png",
-                yol: NamazSureleri(), context: context),
+            makeCard("Dualar", "Namaz dualarını, surelerini, faydalı duaları okuyun.", "dualar.png",yol: DualarGenel(),context: context),
             SizedBox(
               height: 5,
             ),

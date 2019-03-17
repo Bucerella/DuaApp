@@ -1,3 +1,4 @@
+import 'package:dua_app/screen/faydali_dualar_detay.dart';
 import 'package:dua_app/screen/namaz_sureleri/namazsureleri_detay.dart';
 import 'package:flutter/material.dart';
 
@@ -165,6 +166,32 @@ Widget abdestCard(String isim, context, {Widget yol}) {
   );
 }
 
+Widget duaGenelCard(String isim, context, {Widget yol}) {
+  var size = MediaQuery.of(context).size;
+  return Expanded(
+    child: InkWell(
+      onTap: () {
+        var route = MaterialPageRoute(builder: (context) {
+          return yol;
+        });
+        Navigator.push(context, route);
+      },
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.black,
+        child: Text(
+          "$isim",
+          style: TextStyle(
+              fontSize: 30,
+              color: Color(0xFFB0C3D1),
+              fontWeight: FontWeight.bold,
+              fontFamily: "Montserrat"),
+        ),
+      ),
+    ),
+  );
+}
+
 Widget namazAbdesti(BuildContext context, String resim, String aciklama) {
   var size = MediaQuery.of(context).size;
 
@@ -262,12 +289,61 @@ Widget namazSureCard(String sIsim, String sArabic, String sTurkish, sAnlam,
               width: 20,
             ),
             Container(
-              alignment: Alignment.center,
+              alignment: Alignment.centerLeft,
+              width: size.width - 120,
+              height: 75,
               child: Text(
                 "$sIsim",
                 style: TextStyle(
                     color: Color(0xFFCE5069),
-                    fontSize: 24,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "FiraSans"),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+Widget faydaliDuaCard(String sIsim, String sArabic, String sTurkish, sAnlam,
+    BuildContext context) {
+  var size = MediaQuery.of(context).size;
+  return InkWell(
+    onTap: () {
+      var route = MaterialPageRoute(builder: (context) {
+        return FaydaliDualarDetay(sIsim, sTurkish, sArabic, sAnlam);
+      });
+      Navigator.push(context, route);
+    },
+    child: Card(
+      elevation: 5,
+      color: Colors.white,
+      child: Container(
+        width: size.width,
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Image.asset(
+              "images/namaz-sureleri-icon.png",
+              fit: BoxFit.cover,
+              width: 75,
+              height: 75,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Container(
+              alignment: Alignment.centerLeft,
+              width: size.width - 120,
+              height: 75,
+              child: Text(
+                "$sIsim",
+                style: TextStyle(
+                    color: Color(0xFFCE5069),
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                     fontFamily: "FiraSans"),
               ),
@@ -340,6 +416,119 @@ Widget sureDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
     ),
   );
 }
+Widget faydaliDetayCard(String sIsim, String sArabic, String sTurkish, sAnlam,
+    BuildContext context) {
+
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10,
+          ),
+
+          Image.asset("images/faydali_dualar/$sArabic"),
+          SizedBox(height: 15,),
+          Container(
+            height: 4,
+            color: Colors.black,
+
+          ),
+          SizedBox(height: 15,),
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sTurkish.replaceAll(". ", ".\n")}",
+              style: TextStyle(
+                fontFamily: "FiraSans",
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            height: 4,
+            color: Colors.black,
+          ),
+          SizedBox(height: 15,),
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sAnlam.replaceAll(". ",".\n")}",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "FiraSans"
+              ),
+            ),
+          ),
+          SizedBox(height: 20,),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget genelDuaCard(String sIsim, String sArabic, String sTurkish, sAnlam,
+    BuildContext context) {
+
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 10,
+          ),
+          Image.network("${sArabic}"),
+          SizedBox(height: 15,),
+          Container(
+            height: 4,
+            color: Colors.black,
+
+          ),
+          SizedBox(height: 15,),
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sTurkish.replaceAll(". ", ".\n")}",
+              style: TextStyle(
+                fontFamily: "FiraSans",
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            height: 4,
+            color: Colors.black,
+          ),
+          SizedBox(height: 15,),
+          Container(
+            alignment: Alignment.topLeft,
+            child: Text(
+              "${sAnlam.replaceAll(". ",".\n")}",
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "FiraSans"
+              ),
+            ),
+          ),
+          SizedBox(height: 20,),
+        ],
+      ),
+    ),
+  );
+}
+
 
 Widget namazKilinis(String isim, context, {Widget yol}) {
   var size = MediaQuery.of(context).size;
