@@ -49,6 +49,7 @@ class _ZikirMatikState extends State<ZikirMatik> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -198,6 +199,7 @@ class _ZikirMatikState extends State<ZikirMatik> {
           ],
         ),
       ),
+
     );
   }
 }
