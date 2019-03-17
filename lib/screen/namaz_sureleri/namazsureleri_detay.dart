@@ -22,7 +22,7 @@ class _NamazSureDetayState extends State<NamazSureDetay> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.amber,
+          backgroundColor:Color(0XFFFCC18F),
           title: Text("${widget.sureAd}",style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 25,
@@ -31,7 +31,7 @@ class _NamazSureDetayState extends State<NamazSureDetay> {
           ),
           ),
         ),
-        backgroundColor: Colors.amber,
+        backgroundColor: Color(0XFFFCC18F),
         body: sureDetayCard("${widget.sureAd}", "${widget.sureArabic}",
             "${widget.sureTurkish}", "${widget.sureMean}", context));
   }
