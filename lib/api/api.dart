@@ -3,19 +3,19 @@ import 'package:async/async.dart' ;
 import 'dart:convert';
 
 Future<List> getEsmaulHusna() async{
-   String url = "https://raw.githubusercontent.com/saturu/DuaApp/master/api/esmaulhusna.json?token=AZIUYteOmVw6Ga-ejBaq5Q-ZNHK6YsNrks5cjObjwA%3D%3D";
+   String url = "http://mikailhoca.com/dua_api/esmaulhusna.json";
    http.Response response = await http.get(url);
-   return json.decode(response.body);
+   return json.decode(utf8.decode(response.bodyBytes));
 }
 
 Future<List> getSureler() async{
-   String url = "https://raw.githubusercontent.com/saturu/DuaApp/master/api/namazsureleri.json?token=AZIUYugRTyIpR-WNK32AiqW9dXwDZtG7ks5cjmcGwA%3D%3D";
+   String url = "http://mikailhoca.com/dua_api/namazsureleri.json";
    http.Response response = await http.get(url);
-   return json.decode(response.body);
+   return json.decode(utf8.decode(response.bodyBytes));
 }
 
 Future<List> getDualar() async{
-   String url = "https://raw.githubusercontent.com/saturu/DuaApp/master/api/namazdualari.json?token=AZIUYjsJdBFtrDe74S2_2CCKQnZX3ZdCks5cjoc2wA%3D%3D";
+   String url = "http://mikailhoca.com/dua_api/namazdualariapi.json";
    http.Response response = await http.get(url);
-   return json.decode(response.body);
+   return json.decode(utf8.decode(response.bodyBytes));
 }

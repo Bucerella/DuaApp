@@ -14,12 +14,14 @@ class _BayramNamaziState extends State<BayramNamazi> {
 
       appBar: AppBar(
         backgroundColor: Color(0xFF46A98C),
-        title: Text("BAYRAM NAMAZI KILINIŞI",
-          style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Montserrat"),),
+        title: FittedBox(
+          child: Text("BAYRAM NAMAZI KILINIŞI",
+            style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Montserrat"),),
+        ),
 
       ),
       body: SingleChildScrollView(

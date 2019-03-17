@@ -114,30 +114,7 @@ class _ZikirMatikState extends State<ZikirMatik> {
                   borderRadius: BorderRadius.circular(32.5),
                   color: Colors.transparent,
                   child: InkWell(
-                    onTap: () {
-                      zikirSayac[selectedZikirItem]++;
-                      _saveData(selectedZikirItem);
-                      setState(() {});
-                    },
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32.5),
-                          border: Border.all(color: Colors.white)),
-                      child: Icon(
-                        FontAwesomeIcons.plus,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    ),
-                  ),
-                ),
-                Material(
-                  elevation: 5,
-                  borderRadius: BorderRadius.circular(32.5),
-                  color: Colors.transparent,
-                  child: InkWell(
+                    borderRadius: BorderRadius.circular(32.5),
                     onTap: () {
                       zikirSayac[selectedZikirItem] = 0;
                       _saveData(selectedZikirItem);
@@ -157,6 +134,32 @@ class _ZikirMatikState extends State<ZikirMatik> {
                     ),
                   ),
                 ),
+                Material(
+                  elevation: 5,
+                  borderRadius: BorderRadius.circular(32.5),
+                  color: Colors.transparent,
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(32.5),
+                    onTap: () {
+                      zikirSayac[selectedZikirItem]++;
+                      _saveData(selectedZikirItem);
+                      setState(() {});
+                    },
+                    child: Container(
+                      height: 75,
+                      width: 75,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(32.5),
+                          border: Border.all(color: Colors.white)),
+                      child: Icon(
+                        FontAwesomeIcons.plus,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                    ),
+                  ),
+                ),
+
               ],
             ),
           ],

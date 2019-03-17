@@ -25,7 +25,10 @@ class _BestVakitNamazlarState extends State<BestVakitNamazlar> with SingleTicker
       appBar: AppBar(
         backgroundColor: Color(0xFF46A98C),
         title: Text("BEŞ VAKİT NAMAZLAR"),
-        bottom: TabBar(isScrollable: true,controller: _tabController,tabs: [
+        bottom: TabBar(
+            labelPadding: EdgeInsets.all(10),
+            indicatorColor: Colors.white,
+            isScrollable: true,controller: _tabController,tabs: [
           Text("Sabah Namazı"),
           Text("Öğle Namazı"),
           Text("İkindi Namazı"),
